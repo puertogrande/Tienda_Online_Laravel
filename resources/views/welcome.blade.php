@@ -10,63 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .top-left {
-                position: absolute;
-                left: 10px;
-                top: 18px;
-            }
-
-            
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
         <script src="//assets.jumpseller.com/public/jquery-3.3.1.min.js"></script>
     </head>
     <body>
@@ -115,11 +60,17 @@
             <div id="carouselHomeControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">   
                     <div class="carousel-item active">
-                        <img class="d-block w-100 " src="https://assets.jumpseller.com/store/bootstrap/themes/178791/options/8406664/slider-demo.jpg?1552582584" alt="Bootstrap">
+                        <img class="d-block h-25 w-100" src="/img//ropa_tendida.jpeg" alt="fashion">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 " src="https://assets.jumpseller.com/store/bootstrap/themes/178791/options/8406666/slider-demo-2.jpg?1552582584" alt="Bootstrap">
+                        <img class="d-block h-25 w-100" src="/img//hipster.webp" alt="hipster clothing">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block h-25 w-100" src="/img//pantalones.jpg" alt="pants">
                     </div> 
+                    <div class="carousel-item">
+                        <img class="d-block h-25 w-100" src="/img//gente.jpg" alt="people">
+                    </div>  
                 </div>
                 <a class="carousel-control-prev" href="#carouselHomeControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

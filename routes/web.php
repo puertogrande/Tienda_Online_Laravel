@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/categories', 'CategoriesController@getAll')->name('categories');
+Route::get('/showcategory/{categoryId}', 'CategoriesController@getShow');

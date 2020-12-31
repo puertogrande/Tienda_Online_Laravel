@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
+use App\Category as Category;
 
 class CategoriesController extends Controller
 {
@@ -11,5 +11,12 @@ class CategoriesController extends Controller
     {
         $this->category = new Category;
         return view('categories', ['categories' => $this->category->getAllCategories()]);
+    }
+    public function getShow($categoryId)
+    {   
+        #$user = App\User::find(1); 
+        $category = Category::find($categoryId);
+        $products = Category::find($categoryId)->products;
+        return view('categoryProducts', ['products' =>  $products, 'category' => $category]);  
     }
 }
