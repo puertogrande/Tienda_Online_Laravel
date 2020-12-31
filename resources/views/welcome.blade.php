@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Tienda de ropa</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <style>
             html, body {
                 background-color: #fff;
@@ -40,9 +41,13 @@
                 top: 18px;
             }
 
-            .content {
-                text-align: center;
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
             }
+
+            
 
             .title {
                 font-size: 84px;
@@ -62,38 +67,82 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="//assets.jumpseller.com/public/jquery-3.3.1.min.js"></script>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url('/categories') }}">Categorias</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/categories') }}">Productos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="{{ url('/categories') }}">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/categories') }}">Trabaja con Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/categories') }}">Blog</a>
+                    </li>
+        
+                    @if (Route::has('login'))
+                        @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                        </li>
+                        @else
+                            <li>
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li>
+                                    <a class="nav-link" href="{{ route('register') }}">Registro</a>
+                                </li>
+                            @endif
+                        @endauth
                         @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                </ul>
             </div>
-        </div>
+        </nav>
+        
+
+
+            <div id="carouselHomeControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">   
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 " src="https://assets.jumpseller.com/store/bootstrap/themes/178791/options/8406664/slider-demo.jpg?1552582584" alt="Bootstrap">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 " src="https://assets.jumpseller.com/store/bootstrap/themes/178791/options/8406666/slider-demo-2.jpg?1552582584" alt="Bootstrap">
+                    </div> 
+                </div>
+                <a class="carousel-control-prev" href="#carouselHomeControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselHomeControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        
     </body>
+
+     <!-- Script to Activate Tooltips -->
+     <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('.carousel').carousel()
+      })
+      
+    </script>
+
+       <!-- Bootstrap Core JavaScript -->
+       <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </html>
