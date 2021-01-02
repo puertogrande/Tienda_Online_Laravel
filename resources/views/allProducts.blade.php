@@ -17,12 +17,10 @@
     <body>
         <div class="container ">
             <div class="justify-content-center">
-                <h1 class="text-primary">PAGINA DE LAS CATEGORIAS</h1>
-
-                <a class="nav-link" href="{{ url('/newCategoryForm') }}">Añadir nueva categoria</span></a>
-                @foreach($categories as $category)
-                  
-                    <a class="nav-link" href="{{ url('/showcategory/'.$category->id) }}">  <h1 class="m-5">  {{ $category->name}}</h1></a>
+                <h1 class="text-primary">Todos los productos</h1>
+                @foreach($products as $product)
+                    <h1>  {{ $product->name}}</h1>
+                    <h1>  Precio: {{ $product->price}}</h1>
                 @endforeach
             </div>
         </div>

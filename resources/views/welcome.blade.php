@@ -10,12 +10,12 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
         <script src="//assets.jumpseller.com/public/jquery-3.3.1.min.js"></script>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <body class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
             <a class="navbar-brand" href="{{ url('/categories') }}">Categorias</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/categories') }}">Productos</span></a>
+                        <a class="nav-link" href="{{ url('/allProducts') }}">Todos los Productos</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"  href="{{ url('/categories') }}">Sobre Nosotros</a>
@@ -54,33 +54,43 @@
                 </ul>
             </div>
         </nav>
-        
-
-
-            <div id="carouselHomeControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">   
-                    <div class="carousel-item active">
-                        <img class="d-block h-25 w-100" src="/img//ropa_tendida.jpeg" alt="fashion">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block h-25 w-100" src="/img//hipster.webp" alt="hipster clothing">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block h-25 w-100" src="/img//pantalones.jpg" alt="pants">
-                    </div> 
-                    <div class="carousel-item">
-                        <img class="d-block h-25 w-100" src="/img//gente.jpg" alt="people">
-                    </div>  
-                </div>
-                <a class="carousel-control-prev" href="#carouselHomeControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselHomeControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <h1>Tiendaropa.com </h1>
             </div>
+        </div>
+        
+        <div id="carouselHomeControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">   
+                <div class="carousel-item active">
+                    <img class="d-block" src="/img//ropa_tendida.jpeg" alt="fashion">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="/img//hipster.webp" alt="hipster clothing">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="/img//pantalones.jpg" alt="pants">
+                </div> 
+                <div class="carousel-item">
+                    <img class="d-block" src="/img//gente.jpg" alt="people">
+                </div>  
+            </div>
+            <a class="carousel-control-prev" href="#carouselHomeControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselHomeControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" ></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-auto">
+            <h4 class="text-center mt-5">Todos los derechos reservados</h4>
+        </footer>
+                
+        
         
     </body>
 
