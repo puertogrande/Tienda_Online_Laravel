@@ -24,3 +24,7 @@ Route::get('/newProductForm/{categoryId}', 'ProductsController@newProductForm');
 Route::post('/newProduct', 'ProductsController@introduceProduct')->name('newProduct');
 Route::get('/showcategory/{categoryId}', 'CategoriesController@getShow');
 Route::get('/allProducts', 'ProductsController@getAllProducts'); 
+Route::get('/blog', 'PostsController@getAllPosts'); 
+Route::get('/newBlogForm', 'PostsController@newPostForm'); 
+Route::post('/newPost', 'PostsController@introducePost')->name('newPost');
+

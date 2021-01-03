@@ -32,7 +32,7 @@
                         <a class="nav-link" href="{{ url('/categories') }}">Trabaja con Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/categories') }}">Blog</a>
+                        <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
                     </li>
         
                     @if (Route::has('login'))
