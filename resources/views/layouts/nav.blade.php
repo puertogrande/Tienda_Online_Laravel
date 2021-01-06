@@ -77,4 +77,10 @@
     <main class="py-4">
         @yield('content')
     </main>
+    
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <h4 class="text-center mt-5">Todos los derechos reservados</h4>
+    </footer>
+            
 </body>

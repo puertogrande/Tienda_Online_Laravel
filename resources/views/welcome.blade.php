@@ -32,13 +32,6 @@
     </a>
 </div>
 
-<!-- Footer -->
-<footer class="mt-auto">
-    <h4 class="text-center mt-5">Todos los derechos reservados</h4>
-</footer>
-            
-
-
 <!-- Script to Activate Tooltips -->
 <script>
 $(function () {
@@ -47,9 +40,5 @@ $('.carousel').carousel()
 })
 
 </script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 @endsection('content')
