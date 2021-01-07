@@ -19,6 +19,12 @@
                             <input id="name" type="text" name="name" required>
                         </div>
                         <div class="form-group row ml-5 mb-0">
+                            <label for="description" >{{ __('Descripcion breve de la categoría') }}</label>
+                        </div>
+                        <div class="row ml-5 mt-0 mb-5">
+                            <textarea name="description" rows="2" cols="30" maxlength="191"></textarea>
+                        </div>
+                        <div class="form-group row ml-5 mb-0">
                             <label for="image" >{{ __('Imagen de la categoría') }}</label>
                         </div>
                         <div class="row ml-5 mb-5">

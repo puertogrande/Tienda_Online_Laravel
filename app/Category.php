@@ -13,7 +13,6 @@ class Category extends Model
     }
     public function products()
     {
-        //return $this->hasMany('App\Product');
         return $this->hasMany(Product::class);
     }
 
@@ -28,6 +27,7 @@ class Category extends Model
         $request = request(); 
         Category::create([
             'name' => $request->name,
+            'description' => $request->description,
             'image' => $imageName,
         ]);
     }

@@ -7,7 +7,7 @@ use Validator;
 
 class Product extends Model
 {
-    protected $fillable = ['category_id','chart_id','name','price','image'];
+    protected $fillable = ['category_id','chart_id','name','price','image','description'];
     public function categories()
     {
         return $this->belongsTo(Category::class);
@@ -28,6 +28,7 @@ class Product extends Model
         Product::create([
             'category_id' => $request->category_id,
             'name' => $request->name,
+            'description' => $request->description,
             'image'=> $imageName,
             'price' => $request->price,
         ]);
