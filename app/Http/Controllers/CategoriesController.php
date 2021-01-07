@@ -14,7 +14,6 @@ class CategoriesController extends Controller
     }
     public function getShow($categoryId)
     {   
-        #$user = App\User::find(1); 
         $category = Category::find($categoryId);
         $products = Category::find($categoryId)->products;
         return view('categoryProducts', ['products' =>  $products, 'category' => $category]);  

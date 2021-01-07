@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('name')->nullable($value = false);
             $table->float('price')->nullable($value = false);
             $table->string('image');
+            $table->string('description')->nullable($value = true);
             $table->timestamps();
             $table->foreign('category_id')
             ->references('id')

@@ -18,9 +18,9 @@ class Product extends Model
     public function introduceProduct()
     {
         request()->validate([
-            'image'=>'required|image',
+            'image' => 'required|mimes:jpeg,jpg,png',
         ]);
-
+       
        $imageName = time().'.'.request()->image->getClientOriginalExtension();
        request()->image->move(public_path('images'),$imageName);
 
