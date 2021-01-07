@@ -19,8 +19,9 @@ class Category extends Model
 
     public function introduceCategory()
     {
-        echo "imprime esto";
-       
+        request()->validate([
+            'image'=>'required|image',
+        ]);
        $imageName = time().'.'.request()->image->getClientOriginalExtension();
         echo $imageName;
         request()->image->move(public_path('images'),$imageName);
