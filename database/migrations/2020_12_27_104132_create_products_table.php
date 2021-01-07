@@ -17,8 +17,9 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('category_id');
             $table->bigInteger('chart_id')->nullable();
-            $table->string('name');
-            $table->float('price');
+            $table->string('name')->nullable($value = false);
+            $table->float('price')->nullable($value = false);
+            $table->string('image');
             $table->timestamps();
             $table->foreign('category_id')
             ->references('id')

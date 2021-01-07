@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Validator;
 
 class Product extends Model
 {
-    protected $fillable = ['category_id','chart_id','name','price'];
+    protected $fillable = ['category_id','chart_id','name','price','image'];
     public function categories()
     {
         return $this->belongsTo(Category::class);
@@ -16,11 +17,18 @@ class Product extends Model
     }
     public function introduceProduct()
     {
-        echo "se ha llamado a nuevo producto";
+        request()->validate([
+            'image'=>'required|image',
+        ]);
+
+       $imageName = time().'.'.request()->image->getClientOriginalExtension();
+       request()->image->move(public_path('images'),$imageName);
+
         $request = request(); 
         Product::create([
             'category_id' => $request->category_id,
             'name' => $request->name,
+            'image'=> $imageName,
             'price' => $request->price,
         ]);
     }

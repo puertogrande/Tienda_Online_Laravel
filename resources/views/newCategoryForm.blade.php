@@ -4,7 +4,7 @@
 
 <div class="card-body">
     <!--<form crear la ruta del form !!!! -->
-    <form method="POST" action="{{ route('newCategory') }}">
+    <form method="POST" enctype="multipart/form-data" action="{{ route('newCategory') }}">
     @csrf
         <div class="row justify-content-center">
             <h1 class="m-5">Introduzca los datos de la nueva categoría</h1>
@@ -17,6 +17,12 @@
                         </div>
                         <div class="row ml-5">
                             <input id="name" type="text" name="name" required>
+                        </div>
+                        <div class="form-group row ml-5">
+                            <label for="image" >{{ __('Imagen de la categoría') }}</label>
+                        </div>
+                        <div class="row ml-5">
+                            <input id="image" type="file" name="image" required>
                         </div>
                     </div>
                 </div>

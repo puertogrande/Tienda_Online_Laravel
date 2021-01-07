@@ -27,6 +27,7 @@ class CategoriesController extends Controller
     }
     public function introduceCategory()
     {
+        echo "este es el controlador";
         $this->category = new Category;
         $this->category->introduceCategory();
         return redirect('/categories');

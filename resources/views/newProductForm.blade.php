@@ -3,7 +3,7 @@
 @section('content')
 <div class="card-body">
     <!--<form crear la ruta del form !!!! -->
-    <form method="POST" action="{{ route('newProduct') }}">
+    <form method="POST" enctype="multipart/form-data" action="{{ route('newProduct') }}">
     @csrf
         <div class="row justify-content-center">
             <h1 class="m-5">Introduzca un nuevo producto a la categoría  {{$category->name}}</h1>
@@ -23,6 +23,14 @@
                         <div class="row ml-5">
                             <input id="number" type="text" name="price" required>
                         </div>
+                        <div class="form-group row ml-5">
+                            <label for="image" >{{ __('Imagen del producto') }}</label>
+                        </div>
+                        <div class="row ml-5">
+                            <input id="image" type="file" name="image" required>
+                        </div>
+
+                        
                         <input id="category_id" name="category_id" type="hidden" value="{{$category->id}}">
                     </div>
                 </div>
